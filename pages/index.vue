@@ -9,10 +9,10 @@
 
   export default Vue.extend({
     async asyncData({ $content }) {
-      const home = await $content('home').fetch()
+      // const home = await $content('home').fetch()
 
       return {
-        home,
+        home: {},
       }
     },
   })
