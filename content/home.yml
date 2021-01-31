@@ -1,5 +1,23 @@
-{
-  title: ''
-  intro: ''
-  team: []
-}
+title: Labo Courtois
+intro: |-
+  ## Ma belle intro
+
+  sur \
+  plusieurs\
+  lignes
+
+  - et
+  - des
+  - puces
+
+
+  Avec du **~~style~~** !
+team:
+  - name: Mathieu
+    role: Le chef
+    photo: /img/11351322.jpg
+    description: Une description de **qualité** !
+  - name: Alex
+    role: La vrai cheffe
+    photo: https://pbs.twimg.com/profile_images/1035064135447400448/IqFoaBlg_400x400.jpg
+    description: Une autre *description* !
