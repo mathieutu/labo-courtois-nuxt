@@ -16,6 +16,9 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
+    script: [
+      { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -39,6 +42,7 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    '@nuxt/content'
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
