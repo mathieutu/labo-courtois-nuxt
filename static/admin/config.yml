@@ -13,17 +13,31 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'employes'
-    label: 'Employés'
-    folder: 'content/employes'
-    format: 'yaml'
+  - name: employes
+    label: Employés
+    folder: content/employes
+    format: frontmatter
     create: true
-    slug: '{{slug}}'
-    identifier_field: name
-    editor:
-      preview: true
     fields:
-      - { label: 'Nom', name: 'name', widget: 'string' }
-      - { label: 'Role', name: 'role', widget: 'string' }
-      - { label: 'Photo', name: 'photo', widget: 'image' }
-      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: Nom, name: title, widget: string }
+      - { label: Role, name: role, widget: string }
+      - { label: Photo, name: photo, widget: image }
+      - { label: Description, name: body, widget: markdown }
+  - name: site
+    label: Site
+    files:
+      - label: Page d'accueil
+        name: home
+        file: content/home.yml
+        fields:
+          - { label: Titre, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - label: Équipes
+            name: team
+            widget: list
+            fields:
+              - { label: Nom, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Photo, name: photo, widget: image }
+              - { label: Description, name: description, widget: markdown }
+
