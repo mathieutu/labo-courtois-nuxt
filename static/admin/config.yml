@@ -1,21 +1,29 @@
 backend:
   name: git-gateway
   branch: main
+  commit_messages:
+    create: 📝 Create {{collection}} “{{slug}}”
+    update: 📝 Update {{collection}} “{{slug}}”
+    delete: 📝 Delete {{collection}} “{{slug}}”
+    uploadMedia: 📝 Upload “{{path}}”
+    deleteMedia: 📝 Delete “{{path}}”
+    openAuthoring: 📝 {{message}}
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  - name: 'employes'
+    label: 'Employés'
+    folder: 'content/employes'
+    format: 'yaml'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: '{{slug}}'
+    identifier_field: name
     editor:
-      preview: false
+      preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Nom', name: 'name', widget: 'string' }
+      - { label: 'Role', name: 'role', widget: 'string' }
+      - { label: 'Photo', name: 'photo', widget: 'image' }
+      - { label: 'Description', name: 'description', widget: 'text' }
