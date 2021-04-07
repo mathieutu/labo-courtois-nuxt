@@ -1,7 +1,8 @@
 <template>
   <div class="prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto">
     <h1>{{ home.title }}</h1>
-    {{ home }}
+    <img :src="home.image" alt="">
+    <nuxt-content :document="home" />
   </div>
 </template>
 
